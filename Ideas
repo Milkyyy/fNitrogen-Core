@@ -1,0 +1,149 @@
+No Permission: &cHey, you have Insufficient permissions to use this. If you believe this is an error please contact an administrator.
+ 
+Error Message: &cHey, an error has occurred. Please refrain from using this command. 
+ 
+Unknown Command: Unknown Command. Please use /help for help.
+ 
+Alerts: 
+Combat: &7(&c!&7): &c%player% &8Might be using %check%. [Violation Level: %VL%]
+Movement: &7(&c!&7): &c%player% &8Might be using &b%check%. &7[&cViolation Level: %VL%&7]
+Passive: &7(&c!&7): &c%player% &8Might be using &a%check%. &7[&cViolation Level: %VL%&7]
+ 
+Utils: 
+Straight Line RED: &m&c---------------------------------------------
+Time Format: %dd%/%mm%/%yy%.
+ 
+Ban Formant:
+Kicked %player%
+* %player%(%server%) has been banned by %staff%(%server%)
+* Duration: %duration%
+* Reason: %reason%
+
+Banip Format:
+Kicked %player%
+* %player%(%server%) has been ip-banned by %staff%(%server%)
+* Duration: %duration%
+* Reason: %reason%
+
+Kick Format: 
+Kicked %player%
+* %player%(%server%) has been kicked by %staff%(%server%)
+* Reason: %reason%
+
+Mute Format:
+Muted %player%
+* %player%(%server%) has been muted by %staff%(%server%)
+* Duration: %duration%
+* Reason: %reason%
+
+Warn Format: 
+Warned %player%
+* %player%(%server%) has been warned by %staff%(%server%)
+* Duration: %duration%
+* Reason: %reason%
+
+
+	FD: %fd-prefix%: %player% has found %amount-d%!
+fNitrogen Core:
+Commands: 
+/nitro <reload | off | on>
+/staffmode <on | off>
+    Slot 1{
+    Description: Right Click: Go to the location in front of you. Left click: Go thru the block you are looking at to the other side.
+    Command: /thru /tp 
+    Item Title: Phase
+  }
+    Slot 2{ 
+    Description: Better looking
+    Command: none
+    Item Title: Better Looking
+  }
+    Slot 3{
+    Description: Look into the inventory of the person you right click on.
+    Command: /invsee
+    Item Title: Invsee
+  }
+    Slot 4{
+    Description: None
+    Command: None
+    Item Title: None
+  }
+    Slot 5{
+    Description: Show Staff online
+    Command: /stafflist
+    Item Title: Staff
+  }
+    Slot 6{
+    Description: None
+    Command: None
+    Item Title:
+  }
+    Slot 7{
+    Description: //todo
+    Command: //todo
+    Item Title: //todo
+  }
+    Slot 8{
+    Description: //todo
+    Command: //todo
+    Item Title: //todo
+  }
+    Slot 9{
+    Description: World Edit wand
+    Command: none
+    Item Title: Wand
+  }
+/broadcast <message | %config/premade message% | all(To all players on the bungeecord>
+/gamemode <survival|creative|adventure> <player> [alias=gmc,gms,gma,gm1,gm2,gm3]
+/jump [alias=cannon] (Set config defualt to 5 seconds & %op% has no cooldown)
+/heal <all | <name> | bungee>
+/feed <all | <name>| <bungee>
+/tp <player | (x) (z) (y)>
+/ss [all,player,server] [alias= freeze,screenshare,]
+/reboot (Option 1: Pick a server that is online: %server-list% Option 2: when server list is shown click on the server that you would like to reboot then type in a password, Option 3: Manual reboot from console) 
+/whereami [alias=position, getpos,getloc]
+/angle <player> (output: %player%’s x: %player-x% z: %player-z% y:%player-y%)
+/give <player> <item | numeric> <amount>
+/world <%worlds%>
+/setworldborder <worldborder | border> (set limit of the border) (may not be less than 1000)
+/god <player | all> <on | off>
+/warp <%warp-locations%>
+/setwarp <name> | /setwarp (x) (z) (y)
+/delwarp <name> (To confirm the deletion of the warp please enter the name of the warp you want to delete to remove it from the warp list.
+/repair <hand | all>
+/speed <fly | walk> <speed number 1-20> 
+/tptoggle
+/togglepm [alias= tgpm,togglepms]
+/ram <server | bungee>
+/open <nether | end | nightmare>
+/enchant <%enchant-name% %lvl%>
+/rename <name | player name(Tool that is in their hand right now)>
+/spawnmob <mob | %player% mob>
+/ts [alias=teamspeak,tsip] (Message: teamspeak ip is ts.example.com)
+/discord [alias=discordlink] (Message: Join our discord discord.gg/example)
+/store (GUI) [alias=buy,shop] (Message: Visit our Store at yourstore.com)
+/exportfile <filename> (Message: Usage: /exportfile <filename>) //Will output a pastebin link to the follow command executer
+/importfile <filename> (Message: Usage: /importfile <filename>) //Must be in the root directory of the bungee folder. Example C:/users/me/server/bungee/plugins/example.yml
+				Ban System 
+/ban (GUI), /banhistory (GUI) (Message: Usage: /ban <player> <time> (-s) <reason>)
+/banip (GUI), /banhistory (GUI) (Message: Usage: /banip <player | ip address> <time> (-s) <reason>)
+/warn (GUI), /warnhistory (GUI) (Message: Usage: /warn (-s) <player> <time> <reason>)
+/kick (GUI), /kickhistory (GUI) (Message: Usage: /kick <player | all> (-s) <reason>)
+/history (GUI) (Message: Usage: /history <player>)
+/alts (GUI) (Message: Usage: /alts <player<)
+/helpop <message> [alias=request,helppls,helpme]
+
+/note <add | del | check> 
+/xray [alias=xray-alerts,xrayalerts] (Message: [⚠] %player% might be using x-ray (%ore-alert%) Found: %ore-counter%!
+/blacklist (Config-Only) (Message: Are you sure you want to blacklist this player from the server. Click Here to confirm the blacklist of %player%.)
+    Log.yml {
+    Ban: <player> <timeofcommand> <reason>
+    Kick: <player> <timeofcommand> <reason>
+    Warn: <player> <timeofcommand> <reason>
+    Mute: <player> <timeofcommand> <reason>
+    reboot: <player> <timeofcommand> 
+    ss: <player> <timeofcommand>
+    nitro: <player> <timeofcommand>
+    note: <staff> <timeofthecommand> <playernotedon>
+    helpop: <player> <timeofthecommand>
+    }
