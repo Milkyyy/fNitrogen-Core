@@ -124,6 +124,24 @@ Commands:
 /store (GUI) [alias=buy,shop] (Message: Visit our Store at yourstore.com)
 /exportfile <filename> (Message: Usage: /exportfile <filename>) //Will output a pastebin link to the follow command executer
 /importfile <filename> (Message: Usage: /importfile <filename>) //Must be in the root directory of the bungee folder. Example C:/users/me/server/bungee/plugins/example.yml
+					Ranks
+// Rank inheritence will be avalible as well with the creation of the rank
+// This will work on a check system of event registering throught a db that will regularly check that state of the ranks
+/rank help 
+---------+----------------------&8(&c&lRanks&8)------------------------+-------
+ 		/rank (Message: Outputs: Your current rank is <player_rank>.
+		/rank <create | delete | modifiy>
+		/rank <set | remove> <player>
+		/rank <addperm | delperm>
+		/rank <priority | prioityset> <player>
+---------+---------------------------------------------------------------+-------	
+Commands
+/rank (Message: Outputs: Your current rank is <player_rank>.
+/rank <create | delete | modifiy>
+/rank <set | remove> <player>
+/rank <addperm | delperm>
+/rank <priority | prioityset> <player>
+
 				Ban System 
 /ban (GUI), /banhistory (GUI) (Message: Usage: /ban <player> <time> (-s) <reason>)
 /banip (GUI), /banhistory (GUI) (Message: Usage: /banip <player | ip address> <time> (-s) <reason>)
@@ -132,7 +150,12 @@ Commands:
 /history (GUI) (Message: Usage: /history <player>)
 /alts (GUI) (Message: Usage: /alts <player<)
 /helpop <message> [alias=request,helppls,helpme]
-
+/auth <player> <password> {
+	player-pin:
+	player-token:
+	player-uuid:
+// Only way to set pin is throught the console with /authsetplayer <player> <password>
+}
 /note <add | del | check> 
 /xray [alias=xray-alerts,xrayalerts] (Message: [⚠] %player% might be using x-ray (%ore-alert%) Found: %ore-counter%!
 /blacklist (Config-Only) (Message: Are you sure you want to blacklist this player from the server. Click Here to confirm the blacklist of %player%.)
@@ -146,4 +169,6 @@ Commands:
     nitro: <player> <timeofcommand>
     note: <staff> <timeofthecommand> <playernotedon>
     helpop: <player> <timeofthecommand>
+    auth: <player> <timeofcommand> <timeonserver>
     }
+    
