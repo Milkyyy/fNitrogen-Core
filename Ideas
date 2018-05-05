@@ -105,6 +105,8 @@ Commands:
 /angle <player> (output: %player%’s x: %player-x% z: %player-z% y:%player-y%)
 /give <player> <item | numeric> <amount>
 /world <%worlds%>
+/smite <player> <multiplier>
+	// Multiplier meaning in the number of hearts you do per command. 
 /setworldborder <worldborder | border> (set limit of the border) (may not be less than 1000)
 /god <player | all> <on | off>
 /warp <%warp-locations%>
@@ -171,4 +173,5 @@ Commands
     helpop: <player> <timeofthecommand>
     auth: <player> <timeofcommand> <timeonserver>
     }
+   
     
